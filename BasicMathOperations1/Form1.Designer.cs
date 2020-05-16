@@ -37,6 +37,9 @@
             this.lblResult = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
+            this.btnminus = new System.Windows.Forms.Button();
+            this.btnmultiply = new System.Windows.Forms.Button();
+            this.btndiviedierd = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -129,12 +132,48 @@
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
+            // btnminus
+            // 
+            this.btnminus.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnminus.Location = new System.Drawing.Point(468, 238);
+            this.btnminus.Name = "btnminus";
+            this.btnminus.Size = new System.Drawing.Size(66, 62);
+            this.btnminus.TabIndex = 9;
+            this.btnminus.Text = "-";
+            this.btnminus.UseVisualStyleBackColor = true;
+            this.btnminus.Click += new System.EventHandler(this.btnminus_Click);
+            // 
+            // btnmultiply
+            // 
+            this.btnmultiply.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmultiply.Location = new System.Drawing.Point(587, 139);
+            this.btnmultiply.Name = "btnmultiply";
+            this.btnmultiply.Size = new System.Drawing.Size(66, 62);
+            this.btnmultiply.TabIndex = 10;
+            this.btnmultiply.Text = "*";
+            this.btnmultiply.UseVisualStyleBackColor = true;
+            this.btnmultiply.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btndiviedierd
+            // 
+            this.btndiviedierd.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btndiviedierd.Location = new System.Drawing.Point(587, 238);
+            this.btndiviedierd.Name = "btndiviedierd";
+            this.btndiviedierd.Size = new System.Drawing.Size(66, 62);
+            this.btndiviedierd.TabIndex = 11;
+            this.btndiviedierd.Text = "/";
+            this.btndiviedierd.UseVisualStyleBackColor = true;
+            this.btndiviedierd.Click += new System.EventHandler(this.btndiviedierd_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btndiviedierd);
+            this.Controls.Add(this.btnmultiply);
+            this.Controls.Add(this.btnminus);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lblResult);
@@ -162,6 +201,9 @@
         private System.Windows.Forms.Label lblResult;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnminus;
+        private System.Windows.Forms.Button btnmultiply;
+        private System.Windows.Forms.Button btndiviedierd;
     }
 }
 

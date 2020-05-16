@@ -68,5 +68,75 @@ namespace BasicMathOperations1
             txtNumber1.Focus();
             txtNumber1.SelectAll();
         }
+
+        private void btnminus_Click(object sender, EventArgs e)
+        {
+            int number1, number2, result;
+            try
+            {
+                number1 = Convert.ToInt32(txtNumber1.Text);
+                number2 = Convert.ToInt32(txtNumber2.Text);
+                result = number1 - number2;
+                lblResult.Text = Convert.ToString(result);
+                lblResultType.Text = "Differenz";
+            }
+            catch (Exception ex)
+            {
+                lblResultType.Text = "Fehler";
+                lblResult.Text = "Kein numerischer Wert!";
+
+                MessageBox.Show(ex.Message, "Eingabefehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                txtNumber1.Focus();
+                txtNumber1.SelectAll();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int number1, number2, result;
+            try
+            {
+                number1 = Convert.ToInt32(txtNumber1.Text);
+                number2 = Convert.ToInt32(txtNumber2.Text);
+                result = number1 * number2;
+                lblResult.Text = Convert.ToString(result);
+                lblResultType.Text = "Produkt";
+            }
+            catch (Exception ex)
+            {
+                lblResultType.Text = "Fehler";
+                lblResult.Text = "Kein numerischer Wert!";
+
+                MessageBox.Show(ex.Message, "Eingabefehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                txtNumber1.Focus();
+                txtNumber1.SelectAll();
+            }
+        }
+
+        private void btndiviedierd_Click(object sender, EventArgs e)
+        {
+            int number1, number2, result;
+            try
+            {
+                number1 = Convert.ToInt32(txtNumber1.Text);
+                number2 = Convert.ToInt32(txtNumber2.Text);
+                result = number1 / number2;
+                lblResult.Text = Convert.ToString(result);
+                lblResultType.Text = "Quotient";
+            }
+            catch (Exception ex)
+            {
+                lblResultType.Text = "Fehler";
+                lblResult.Text = "Kein numerischer Wert!";
+
+                MessageBox.Show(ex.Message, "Eingabefehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                txtNumber1.Focus();
+                txtNumber1.SelectAll();
+            }
+        }
+    
     }
 }
