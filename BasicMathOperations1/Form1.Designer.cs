@@ -40,6 +40,8 @@
             this.btnminus = new System.Windows.Forms.Button();
             this.btnmultiply = new System.Windows.Forms.Button();
             this.btndiviedierd = new System.Windows.Forms.Button();
+            this.btnPower = new System.Windows.Forms.Button();
+            this.btnRoot = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -86,7 +88,6 @@
             this.txtNumber1.Name = "txtNumber1";
             this.txtNumber1.Size = new System.Drawing.Size(225, 35);
             this.txtNumber1.TabIndex = 4;
-            this.txtNumber1.Text = "0";
             this.txtNumber1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtNumber2
@@ -96,8 +97,8 @@
             this.txtNumber2.Name = "txtNumber2";
             this.txtNumber2.Size = new System.Drawing.Size(225, 35);
             this.txtNumber2.TabIndex = 5;
-            this.txtNumber2.Text = "0";
             this.txtNumber2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtNumber2.TextChanged += new System.EventHandler(this.txtNumber2_TextChanged);
             // 
             // lblResult
             // 
@@ -146,7 +147,7 @@
             // btnmultiply
             // 
             this.btnmultiply.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnmultiply.Location = new System.Drawing.Point(587, 139);
+            this.btnmultiply.Location = new System.Drawing.Point(554, 141);
             this.btnmultiply.Name = "btnmultiply";
             this.btnmultiply.Size = new System.Drawing.Size(66, 62);
             this.btnmultiply.TabIndex = 10;
@@ -157,7 +158,7 @@
             // btndiviedierd
             // 
             this.btndiviedierd.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btndiviedierd.Location = new System.Drawing.Point(587, 238);
+            this.btndiviedierd.Location = new System.Drawing.Point(554, 238);
             this.btndiviedierd.Name = "btndiviedierd";
             this.btndiviedierd.Size = new System.Drawing.Size(66, 62);
             this.btndiviedierd.TabIndex = 11;
@@ -165,12 +166,35 @@
             this.btndiviedierd.UseVisualStyleBackColor = true;
             this.btndiviedierd.Click += new System.EventHandler(this.btndiviedierd_Click);
             // 
+            // btnPower
+            // 
+            this.btnPower.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPower.Location = new System.Drawing.Point(645, 139);
+            this.btnPower.Name = "btnPower";
+            this.btnPower.Size = new System.Drawing.Size(66, 62);
+            this.btnPower.TabIndex = 12;
+            this.btnPower.Text = "^";
+            this.btnPower.UseVisualStyleBackColor = true;
+            // 
+            // btnRoot
+            // 
+            this.btnRoot.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRoot.Location = new System.Drawing.Point(645, 239);
+            this.btnRoot.Name = "btnRoot";
+            this.btnRoot.Size = new System.Drawing.Size(66, 62);
+            this.btnRoot.TabIndex = 13;
+            this.btnRoot.Text = "√";
+            this.btnRoot.UseVisualStyleBackColor = true;
+            this.btnRoot.Click += new System.EventHandler(this.btnRoot_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnRoot);
+            this.Controls.Add(this.btnPower);
             this.Controls.Add(this.btndiviedierd);
             this.Controls.Add(this.btnmultiply);
             this.Controls.Add(this.btnminus);
@@ -204,6 +228,8 @@
         private System.Windows.Forms.Button btnminus;
         private System.Windows.Forms.Button btnmultiply;
         private System.Windows.Forms.Button btndiviedierd;
+        private System.Windows.Forms.Button btnPower;
+        private System.Windows.Forms.Button btnRoot;
     }
 }
 
